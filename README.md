@@ -1,1 +1,1 @@
-"# Spotify API" 
+# Spotify API
