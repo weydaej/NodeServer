@@ -13,9 +13,9 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = ''; // Your client id
-var client_secret = ''; // Your secret
-var redirect_uri = ''; // Your redirect uri
+var client_id = '18b70d37e5b34870bbf1c8ca4d133be6'; // Your client id
+var client_secret = 'd07c249e2606426ab4b8ea0163e00762'; // Your secret
+var redirect_uri = 'http://emilyweyda.com'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
