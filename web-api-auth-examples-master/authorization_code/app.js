@@ -7,7 +7,7 @@
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
 
-var secrets = require('./secrets')
+var secrets = require('./../secrets')
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var cors = require('cors');

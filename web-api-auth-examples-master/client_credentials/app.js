@@ -8,7 +8,7 @@
  */
 
 var request = require('request'); // "Request" library
-var secrets = require('secrets')
+var secrets = require('./../secrets')
 
 var client_id = secrets.client_id(); // Your client id
 var client_secret = secrets.client_secret(); // Your secret
