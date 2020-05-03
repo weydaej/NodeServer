@@ -7,16 +7,16 @@
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
 
-var secrets = require('secrets.js')
+var secrets = require('./secrets')
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = secrets.client_id; // Your client id
-var client_secret = secrets.client_secret; // Your secret
-var redirect_uri = secrets.redirect_uri; // Your redirect uri
+var client_id = secrets.client_id(); // Your client id
+var client_secret = secrets.client_secret(); // Your secret
+var redirect_uri = secrets.redirect_uri(); // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
