@@ -17,3 +17,9 @@ var arr = ["hi", "hello", "hey", "howdy", "hewro"];
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
 }
+
+if (arr.length === 5) {
+    console.log(arr.pop());
+}
+console.log(arr.length);
+console.log(arr);
