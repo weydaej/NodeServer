@@ -23,3 +23,9 @@ if (arr.length === 5) {
 }
 console.log(arr.length);
 console.log(arr);
+
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(3, 6))
