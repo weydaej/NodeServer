@@ -1,31 +1,46 @@
 // javascript
 var hello = "hello, world!";
-console.log(hello);
 
-console.log("this is my first \"%s\" program written in %s", hello, "JavaScript")
+function cl(value) {
+    return console.log(value)
+}
+
+cl(hello);
+
+cl("this is my first \"%s\" program written in %s", hello, "JavaScript")
 
 var nums = {
     twenty: 20,
     thirty: 30,
     forty: 40
 };
-console.log("%O is my nums object ", nums);
-console.log(nums);
-console.log(nums.forty);
+cl("%O is my nums object ", nums);
+cl(nums);
+cl(nums.forty);
 
 var arr = ["hi", "hello", "hey", "howdy", "hewro"];
 for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+    cl(arr[i]);
 }
 
 if (arr.length === 5) {
-    console.log(arr.pop());
+    cl(arr.pop());
 }
-console.log(arr.length);
-console.log(arr);
+cl(arr.length);
+cl(arr);
 
 function add(a, b) {
     return a + b;
 }
 
-console.log(add(3, 6))
+cl(add(3, 6))
+
+// testing for js calc
+var inputString = "-10+26+33-56*34+23";
+var numbers = inputString.split(/\+|\-|\*|\//g);
+var operators = inputString.replace(/[0-9]|\./g, "").split("");
+cl(numbers)
+cl(operators)
+
+var divide = operators.indexOf("/");
+cl(divide)
