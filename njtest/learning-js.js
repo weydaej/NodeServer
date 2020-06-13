@@ -1,12 +1,11 @@
 // javascript
-var hello = "hello, world!";
 
 function cl(value) {
     return console.log(value)
 }
 
+var hello = "hello, world!";
 cl(hello);
-
 cl("this is my first \"%s\" program written in %s", hello, "JavaScript")
 
 var nums = {
@@ -14,6 +13,7 @@ var nums = {
     thirty: 30,
     forty: 40
 };
+
 cl("%O is my nums object ", nums);
 cl(nums);
 cl(nums.forty);
@@ -32,7 +32,6 @@ cl(arr);
 function add(a, b) {
     return a + b;
 }
-
 cl(add(3, 6))
 
 // testing for js calc
