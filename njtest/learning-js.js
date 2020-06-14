@@ -36,10 +36,22 @@ cl(add(3, 6))
 
 // testing for js calc
 var inputString = "-10+26+33-56*34+23";
+var randString = "";
+var operatorString = "+-/*";
+
+for (let i = 0; i < 7; i++) {
+    randString += Math.floor(Math.random() * 100) + 1;
+    if (i < 6) {
+        randString += operatorString[Math.floor(Math.random() * 3) + 1]
+    }
+}
+cl("Random string = " + randString)
+
 var numbers = inputString.split(/\+|\-|\*|\//g);
 var operators = inputString.replace(/[0-9]|\./g, "").split("");
 cl(numbers)
 cl(operators)
+
 
 var divide = operators.indexOf("/");
 cl(divide)
