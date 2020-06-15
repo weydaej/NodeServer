@@ -52,6 +52,17 @@ var operators = inputString.replace(/[0-9]|\./g, "").split("");
 cl(numbers)
 cl(operators)
 
-
 var divide = operators.indexOf("/");
 cl(divide)
+
+function randEqnGenerator() {
+    var randString = "";
+    var operatorString = "+=/*";
+    for (let i = 0; i < 7; i++) {
+        randString += Math.floor(Math.random() * 100) + 1;
+        if (i < 6) {
+            randString += operatorString[Math.floor(Math.random() * 3) + 1]
+        }
+    }
+    return randString;
+}
