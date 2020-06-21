@@ -66,3 +66,21 @@ function randEqnGenerator() {
     }
     return randString;
 }
+
+function vowelRemover(name) {
+    var vowellessName = "";
+    for (let i = 0; i < name.length; i++) {
+        if (name[i].toLowerCase() != "a" && 
+            name[i].toLowerCase() != "e" && 
+            name[i].toLowerCase() != "i" && 
+            name[i].toLowerCase() != "o" && 
+            name[i].toLowerCase() != "u") {
+                vowellessName += name[i];
+        }
+    }
+    cl(vowellessName);
+    return vowellessName;
+}
+
+vowelRemover("Emily")
+vowelRemover("Kevin")
