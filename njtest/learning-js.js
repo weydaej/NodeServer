@@ -67,15 +67,24 @@ function randEqnGenerator() {
     return randString;
 }
 
+function isVowel(character) {
+    if (character.toLowerCase() == "a" ||
+        character.toLowerCase() == "e" ||
+        character.toLowerCase() == "i" ||
+        character.toLowerCase() == "o" ||
+        character.toLowerCase() == "u") {
+            return true;
+        }
+    else {
+        return false;
+    }
+}
+
 function vowelRemover(name) {
     var vowellessName = "";
     for (let i = 0; i < name.length; i++) {
-        if (name[i].toLowerCase() != "a" && 
-            name[i].toLowerCase() != "e" && 
-            name[i].toLowerCase() != "i" && 
-            name[i].toLowerCase() != "o" && 
-            name[i].toLowerCase() != "u") {
-                vowellessName += name[i];
+        if (!isVowel(name[i])) {
+            vowellessName += name[i];
         }
     }
     cl(vowellessName);
