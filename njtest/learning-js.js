@@ -68,13 +68,11 @@ function randEqnGenerator() {
 }
 
 function isVowel(character) {
-    if (character.toLowerCase() == "a" ||
-        character.toLowerCase() == "e" ||
-        character.toLowerCase() == "i" ||
-        character.toLowerCase() == "o" ||
+    if (character.toLowerCase() == "a" || character.toLowerCase() == "e" ||
+        character.toLowerCase() == "i" || character.toLowerCase() == "o" ||
         character.toLowerCase() == "u") {
-            return true;
-        }
+        return true;
+    }
     else {
         return false;
     }
