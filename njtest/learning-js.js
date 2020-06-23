@@ -92,14 +92,15 @@ function vowelRemover(name) {
 vowelRemover("Emily")
 vowelRemover("Kevin")
 
-function passwordGenerator() {
+function passwordGenerator(length) {
     var password = "";
     var possibleChars = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890!_";
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < length; i++) {
         password += possibleChars[Math.floor(Math.random() * possibleChars.length) + 1];
     }
     cl(password);
     return password;
 }
 
-passwordGenerator();
+passwordGenerator(24);
+
