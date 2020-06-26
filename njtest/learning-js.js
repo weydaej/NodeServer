@@ -83,7 +83,7 @@ function vowelRemover(name) {
 }
 
 vowelRemover("Emily")
-vowelRemover("Kevin")
+vowelRemover("eeeeekeeee")
 
 function passwordGenerator(len) {
     var password = "";
@@ -96,4 +96,5 @@ function passwordGenerator(len) {
 }
 
 passwordGenerator(24);
-
+passwordGenerator(12);
+passwordGenerator(240);
