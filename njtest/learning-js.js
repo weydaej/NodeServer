@@ -89,7 +89,7 @@ function passwordGenerator(len) {
     var password = "";
     var possibleChars = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890!_";
     for (let i = 0; i < len; i++) {
-        password += possibleChars[Math.floor(Math.random() * possibleChars.length) + 1];
+        password += possibleChars[Math.floor(Math.random() * possibleChars.length - 1) + 1];
     }
     cl(password);
     return password;
@@ -98,3 +98,5 @@ function passwordGenerator(len) {
 passwordGenerator(24);
 passwordGenerator(12);
 passwordGenerator(240);
+
+
