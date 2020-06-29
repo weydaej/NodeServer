@@ -99,4 +99,10 @@ passwordGenerator(24);
 passwordGenerator(12);
 passwordGenerator(240);
 
+function repeatedString(str, num) {
+    for (let i = 0; i < num; i++) {
+        cl(str);
+    }
+}
 
+repeatedString("hello", 3)
