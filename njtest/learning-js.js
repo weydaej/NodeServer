@@ -106,3 +106,14 @@ function repeatedString(str, num) {
 }
 
 repeatedString("hello", 3)
+
+function getToOdd(num) {
+    var newNumber = num;
+    while (newNumber % 2 == 0) {
+        newNumber/= 2;
+    }
+    cl(newNumber)
+    return newNumber;
+}
+
+getToOdd(100)
