@@ -117,3 +117,5 @@ function getToOdd(num) {
 }
 
 getToOdd(100)
+getToOdd(21)
+getToOdd(22.3)
