@@ -110,12 +110,26 @@ repeatedString("hello", 3)
 function getToOdd(num) {
     var newNumber = num;
     while (newNumber % 2 == 0) {
-        newNumber/= 2;
+        newNumber /= 2;
     }
-    cl(newNumber)
+    cl(newNumber);
     return newNumber;
 }
 
-getToOdd(100)
-getToOdd(21)
-getToOdd(22.3)
+getToOdd(100);
+getToOdd(21);
+
+var arrayOfNums = [123, 532, 123, 984, 984];
+function findSame(arr) {
+    var existing = new Set();
+    var repeated = [];
+    for (let i = 0; i < arrayOfNums.length; i++) {
+        if (!existing.has(arrayOfNums[i])) {
+            existing.add(arrayOfNums[i]);
+        } else {
+            repeated.push(arrayOfNums[i]);
+        }
+    }
+    cl(repeated)
+}
+findSame(arrayOfNums);
