@@ -120,6 +120,7 @@ getToOdd(100);
 getToOdd(21);
 
 var arrayOfNums = [123, 532, 123, 984, 984];
+var arrayOfNums1 = [3, 4, 5, 2, 1];
 function findSame(arr) {
     var existing = new Set();
     var repeated = [];
@@ -133,3 +134,5 @@ function findSame(arr) {
     cl(repeated)
 }
 findSame(arrayOfNums);
+findSame(arrayOfNums1);
+
