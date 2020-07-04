@@ -131,8 +131,23 @@ function findSame(arr) {
             repeated.push(arrayOfNums[i]);
         }
     }
-    cl(repeated)
+    if (repeated.length == 0) {
+        return "No same nums"
+    } else {
+        return repeated;
+    }
 }
-findSame(arrayOfNums);
-findSame(arrayOfNums1);
+cl(findSame(arrayOfNums));
 
+function getTime() {
+    var curr = new Date();
+    var hours = curr.getHours();
+    var mins = curr.getMinutes();
+    var AMorPM = "AM";
+    if (hours > 12) {
+        hours -= 12
+        AMorPM = "PM";
+    }
+    return hours + ":" + mins + " " + AMorPM;
+}
+cl(getTime())
