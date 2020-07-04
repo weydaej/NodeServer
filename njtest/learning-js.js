@@ -158,11 +158,9 @@ function getDate() {
     var day = curr.getUTCDate();
     var year = curr.getFullYear();
     var dayOfWeek = curr.getUTCDay();
-    cl(dayOfWeek)
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     return weekDays[dayOfWeek] + " " + months[month] + " " + day + ", " + year;
 }
-
 cl(getDate())
 
