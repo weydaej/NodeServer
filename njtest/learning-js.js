@@ -164,4 +164,11 @@ function getTodaysDate() {
 }
 cl(getTodaysDate())
 
+function daysSince(date) { // takes in mm/dd/yyyy format
+    var today = new Date();
+    var givenDate = new Date(date);
+    var diff = Math.abs(givenDate - today);
+    return diff/8.64e+7; // converts milliseconds to days
+}
 
+cl(daysSince("11/17/1996"));
