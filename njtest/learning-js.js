@@ -152,7 +152,7 @@ function getTime() {
 }
 cl(getTime())
 
-function getDate() {
+function getTodaysDate() {
     var curr = new Date();
     var month = curr.getMonth();
     var day = curr.getUTCDate();
@@ -162,5 +162,6 @@ function getDate() {
     var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     return weekDays[dayOfWeek] + " " + months[month] + " " + day + ", " + year;
 }
-cl(getDate())
+cl(getTodaysDate())
+
 
