@@ -172,3 +172,5 @@ function daysSince(date) { // takes in mm/dd/yyyy format
 }
 cl(daysSince("11/17/1996"));
 
+hello = (val) => "Hello " + val;
+cl(hello("Emily"))
