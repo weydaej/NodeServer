@@ -174,3 +174,6 @@ cl(daysSince("11/17/1996"));
 
 hello = (val) => "Hello " + val;
 cl(hello("Emily"))
+
+var car = {make: "Mazda", model: 3, color: "black"}
+
