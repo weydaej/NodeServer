@@ -175,8 +175,7 @@ cl(daysSince("11/17/1996"));
 hello = (val) => "Hello " + val;
 cl(hello("Emily"))
 
-var car = {make: "Mazda", model: 3, color: "black"};
-cl(car.color)
+var year = new Date("1/1/2020");
+var car = {make: "Mazda", model: 3, color: "black", year: year.getFullYear()};
 car.color = "gray";
-cl(car.color)
 cl(car)
