@@ -173,9 +173,38 @@ function daysSince(date) { // takes in mm/dd/yyyy format
 cl(daysSince("11/17/1996"));
 
 hello = (val) => "Hello " + val;
-cl(hello("Emily"))
+cl(hello("Emily"));
 
 var year = new Date("1/1/2020");
 var car = {make: "Mazda", model: 3, color: "black", year: year.getFullYear()};
 car.color = "gray";
-cl(car)
+cl(car);
+
+class Car {
+    constructor(make, model, color) {
+        this.make = make;
+        this.model = model;
+        this.color = color;
+    }
+
+    setMake(make) {
+        this.make = make;
+    }
+
+    setModel(model) {
+        this.model = model;
+    }
+
+    setColor(color) {
+        this.color = color;
+    }
+
+    get makeAndModel() {
+        return this.make + " " + this.model;
+    }
+
+}
+
+var myCar = new Car("Honda", "Civic", "Gray");
+cl(myCar.makeAndModel);
+
