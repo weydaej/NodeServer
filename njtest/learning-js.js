@@ -208,3 +208,28 @@ class Car {
 var myCar = new Car("Honda", "Civic", "Gray");
 cl(myCar.makeAndModel);
 
+class User {
+    constructor (first, last) {
+        this.first = first
+        this.last = last
+        this.username = ""
+        this.password = ""
+        this.birthday = new Date()
+    }
+
+    setUsername (username) {
+        this.username = username
+    }
+
+    setPassword (password) {
+        this.password = password
+    }
+
+    setBirtday (birthday) {
+        this.birthday = new Date(birthday)
+    }
+
+    get name() {
+        return this.first + " " + this.last
+    }
+}
