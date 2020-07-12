@@ -225,7 +225,7 @@ class User {
         this.password = password
     }
 
-    setBirtday (birthday) {
+    setBirthday (birthday) {
         this.birthday = new Date(birthday)
     }
 
@@ -233,3 +233,9 @@ class User {
         return this.first + " " + this.last
     }
 }
+
+var myUser = new User("Emily", "Weyda")
+myUser.setBirthday("11/17/1996")
+myUser.setUsername("why_duh")
+myUser.setPassword("thisisasecret")
+cl(myUser)
