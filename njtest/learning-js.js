@@ -241,15 +241,29 @@ myUser.setPassword("thisisasecret")
 cl(myUser)
 
 function fib(n) {
-    if (n == 0) {
-        return 0;
-    } else if (n == 1) {
+    if (n === 2) {
         return 1;
+    } else if (n === 1) {
+        return 0;
     } else {
         return fib(n - 1) + fib(n - 2)
     }
 }
 
-for (let i = 0; i < 20; i++) {
-    cl(fib(i))
+cl("fib: " + fib(19))
+
+function fibIter(n) {
+    const lastTwo = [0, 1];
+    let counter = 3;
+    while (counter <= n) {
+        const nextFib = lastTwo[0] + lastTwo[1];
+        lastTwo[0] = lastTwo[1];
+        lastTwo[1] = nextFib;
+        counter++;
+    }
+    return n > 1 ? lastTwo[1] : lastTwo[0];
+}
+
+for (let i = 1; i < 20; i++) {
+    cl("Fib[" + i + "]: " + fibIter(i))
 }
