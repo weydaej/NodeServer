@@ -267,3 +267,14 @@ function fibIter(n) {
 for (let i = 1; i < 20; i++) {
     cl("Fib[" + i + "]: " + fibIter(i))
 }
+
+function fibFastRecursive(n, dict = {1: 0, 2: 1}) {
+    if (n in dict) {
+        return dict[n];
+    } else {
+        dict[n] = fibFastRecursive(n - 1, dict) + fibFastRecursive(n - 2, dict);
+        return dict[n];
+    }
+}
+cl(fib(20))
+cl(fibFastRecursive(20))
