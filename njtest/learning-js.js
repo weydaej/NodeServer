@@ -262,6 +262,13 @@ function fibIter(n) {
         counter++; // increment counter
     }
     return n > 1 ? lastTwo[1] : lastTwo[0]; // if n is 2 or more, return the second number of the array, else return the first
+    /**
+     * if (n > 1) {
+     *      return lastTwo[1];
+     * } else {
+     *      return lastTwo[0];
+     * }
+     */
 }
 
 for (let i = 1; i < 20; i++) {
