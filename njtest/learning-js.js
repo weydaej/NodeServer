@@ -253,15 +253,15 @@ function fib(n) {
 cl("fib: " + fib(19))
 
 function fibIter(n) {
-    const lastTwo = [0, 1];
-    let counter = 3;
-    while (counter <= n) {
-        const nextFib = lastTwo[0] + lastTwo[1];
-        lastTwo[0] = lastTwo[1];
-        lastTwo[1] = nextFib;
-        counter++;
+    const lastTwo = [0, 1]; // initialize two var array
+    let counter = 3; // start at 3 because first two are already there
+    while (counter <= n) { // while the counter <= the number we are trying to find the fib nth term
+        const nextFib = lastTwo[0] + lastTwo[1]; // find the next fib number
+        lastTwo[0] = lastTwo[1]; // set the first of the array to the second
+        lastTwo[1] = nextFib; // set the second of the array to the new next fib number
+        counter++; // increment counter
     }
-    return n > 1 ? lastTwo[1] : lastTwo[0];
+    return n > 1 ? lastTwo[1] : lastTwo[0]; // if n is 2 or more, return the second number of the array, else return the first
 }
 
 for (let i = 1; i < 20; i++) {
