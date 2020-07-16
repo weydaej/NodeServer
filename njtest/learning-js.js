@@ -309,4 +309,6 @@ function isPalindrome(word) {
 }
 cl(isPalindrome("hello"))
 cl(isPalindrome("absdba"))
+cl(isPalindrome("abba"))
+
 
