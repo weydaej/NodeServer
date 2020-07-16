@@ -297,7 +297,7 @@ cl(fibFastRecursive(20))
 // length = 11
 // first  == word[i]
 // second == word[length - 1 - i]
-function palindrome(word) {
+function isPalindrome(word) {
     var lengthOfWord = word.length;
     var isPal = true;
     for (let i = 0; i < lengthOfWord/2; i++) {
@@ -305,9 +305,8 @@ function palindrome(word) {
             isPal = false; 
         }
     }
-    cl(isPal)
     return isPal;
 }
-palindrome("hello")
-palindrome("abba")
+cl(isPalindrome("hello"))
+cl(isPalindrome("absdba"))
 
