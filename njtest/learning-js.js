@@ -285,3 +285,29 @@ function fibFastRecursive(n, dict = {1: 0, 2: 1}) {
 }
 cl(fib(20))
 cl(fibFastRecursive(20))
+
+// 0 1 2 3 4 5 6 7 8 9 10
+// t h i s i s a t e s t
+// 0 & 10
+// 1 & 9
+// 2 & 8
+// 3 & 7
+// 4 & 6
+
+// length = 11
+// first  == word[i]
+// second == word[length - 1 - i]
+function palindrome(word) {
+    var lengthOfWord = word.length;
+    var isPal = true;
+    for (let i = 0; i < lengthOfWord/2; i++) {
+        if (word[i] != word[lengthOfWord - 1 - i]) {
+            isPal = false; 
+        }
+    }
+    cl(isPal)
+    return isPal;
+}
+palindrome("hello")
+palindrome("abba")
+
