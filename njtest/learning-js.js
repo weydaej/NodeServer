@@ -311,4 +311,29 @@ cl(isPalindrome("hello"))
 cl(isPalindrome("absdba"))
 cl(isPalindrome("abba"))
 
+function bubbleSort(array) {
+    let isSorted = false;
+    let counter = 0;
+    while (!isSorted) {
+        isSorted = true;
+        for (let i = 0; i < array.length - 1- counter; i++) {
+            if (array[i] > array[i + 1]) {
+                swap(array, i, i + 1);
+                isSorted = false;
+            }
+        }
+        counter++;
+    }
+    return array;
+  }
+  
+  function swap(array, num1, num2) {
+    var temp = array[num1];
+    array[num1] = array[num2];
+    array[num2] = temp;
+  }
 
+cl(bubbleSort([23, 54, 12, 2, 64, 34, 96, 1]))
+cl(bubbleSort([1]))
+cl(bubbleSort([2, 1]))
+  
