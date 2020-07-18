@@ -312,19 +312,19 @@ cl(isPalindrome("absdba"))
 cl(isPalindrome("abba"))
 
 function bubbleSort(array) {
-    let isSorted = false;
-    let counter = 0;
-    while (!isSorted) {
-        isSorted = true;
-        for (let i = 0; i < array.length - 1- counter; i++) {
-            if (array[i] > array[i + 1]) {
-                swap(array, i, i + 1);
-                isSorted = false;
+    let isSorted = false; // is sorted will be true when we can end the loop
+    let counter = 0; // to optimize the amount of numbers we need to iterate through 
+    while (!isSorted) { // keep doing this until array is sorted
+        isSorted = true; // true unless there is a swap
+        for (let i = 0; i < array.length - 1 - counter; i++) {
+            if (array[i] > array[i + 1]) { // if the next number is greater than the current number
+                swap(array, i, i + 1); // swap them 
+                isSorted = false; // we made a swap so we aren't done yet
             }
         }
-        counter++;
+        counter++; // increment counter so we iterate through one less time
     }
-    return array;
+    return array; // hurray we are done
   }
   
   function swap(array, num1, num2) {
