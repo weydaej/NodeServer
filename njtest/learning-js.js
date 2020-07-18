@@ -350,6 +350,19 @@ function insertionSort(array) {
 
 cl(insertionSort([23, 54, 12, 2, 64, 34, 96, 1]))
 
-function mergeSort(array) {
-    
+function selectionSort(array) {
+    let startIndex = 0;
+    while (startIndex < array.length - 1) {
+        let smallestIndex = startIndex;
+        for (let i = startIndex + 1; i < array.length; i++) {
+            if (array[smallestIndex] > array[i]) {
+                smallestIndex = i;
+            }
+        }
+        swap(array, startIndex, smallestIndex);
+        startIndex++;
+    }
+    return array;
 }
+
+cl(selectionSort([23, 54, 12, 2, 64, 34, 96, 1]))
