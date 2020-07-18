@@ -311,6 +311,12 @@ cl(isPalindrome("hello"))
 cl(isPalindrome("absdba"))
 cl(isPalindrome("abba"))
 
+function swap(array, num1, num2) {
+    var temp = array[num1];
+    array[num1] = array[num2];
+    array[num2] = temp;
+}
+
 function bubbleSort(array) {
     let isSorted = false; // is sorted will be true when we can end the loop
     let counter = 0; // to optimize the amount of numbers we need to iterate through 
@@ -326,14 +332,24 @@ function bubbleSort(array) {
     }
     return array; // hurray we are done
   }
-  
-  function swap(array, num1, num2) {
-    var temp = array[num1];
-    array[num1] = array[num2];
-    array[num2] = temp;
-  }
 
 cl(bubbleSort([23, 54, 12, 2, 64, 34, 96, 1]))
 cl(bubbleSort([1]))
 cl(bubbleSort([2, 1]))
-  
+
+function insertionSort(array) {
+    for (let i = 0; i < array.length; i++) {
+		let j = i;
+		while (j > 0 && array[j] < array[j - 1]) {
+			swap(array, j, j - 1);
+			j--;
+		}
+	}
+	return array;
+}
+
+cl(insertionSort([23, 54, 12, 2, 64, 34, 96, 1]))
+
+function mergeSort(array) {
+    
+}
