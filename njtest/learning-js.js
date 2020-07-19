@@ -351,18 +351,19 @@ function insertionSort(array) {
 cl(insertionSort([23, 54, 12, 2, 64, 34, 96, 1]))
 
 function selectionSort(array) {
-    let startIndex = 0;
-    while (startIndex < array.length - 1) {
-        let smallestIndex = startIndex;
-        for (let i = startIndex + 1; i < array.length; i++) {
-            if (array[smallestIndex] > array[i]) {
-                smallestIndex = i;
+    let startIndex = 0; // starts at zero
+    while (startIndex < array.length - 1) { // while we are not done with the array
+        let smallestIndex = startIndex; // create second pointer to keep track of the smallest 
+        for (let i = startIndex + 1; i < array.length; i++) { // start after the starting index and traverse the array
+            if (array[smallestIndex] > array[i]) { // if the smallest index is larger than the current spot in the array, 
+                smallestIndex = i; // set as the new smallest
             }
         }
-        swap(array, startIndex, smallestIndex);
-        startIndex++;
+        swap(array, startIndex, smallestIndex); // swap in array
+        startIndex++; // increment
     }
     return array;
 }
 
 cl(selectionSort([23, 54, 12, 2, 64, 34, 96, 1]))
+
