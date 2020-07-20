@@ -338,14 +338,14 @@ cl(bubbleSort([1]))
 cl(bubbleSort([2, 1]))
 
 function insertionSort(array) {
-    for (let i = 0; i < array.length; i++) {
-		let j = i;
-		while (j > 0 && array[j] < array[j - 1]) {
-			swap(array, j, j - 1);
-			j--;
+    for (let i = 0; i < array.length; i++) { // iterate through the array
+		let j = i; // create second pointer
+		while (j > 0 && array[j] < array[j - 1]) { // while the second pointer is greater than 0 and the number at the current j position is less than the one behind it
+			swap(array, j, j - 1); // swap the values
+			j--; // decrement j
 		}
 	}
-	return array;
+	return array; // annnd scene
 }
 
 cl(insertionSort([23, 54, 12, 2, 64, 34, 96, 1]))
