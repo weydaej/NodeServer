@@ -298,18 +298,15 @@ cl(fibFastRecursive(20))
 // first  == word[i]
 // second == word[length - 1 - i]
 function isPalindrome(word) {
-    var lengthOfWord = word.length;
     var isPal = true;
-    for (let i = 0; i < lengthOfWord/2; i++) {
-        if (word[i] != word[lengthOfWord - 1 - i]) {
-            isPal = false; 
-        }
+    for (let i = 0; i < word.length/2; i++) { 
+        if (word[i] != word[word.length - 1 - i]) isPal = false;
     }
     return isPal;
 }
-cl(isPalindrome("hello"))
-cl(isPalindrome("absdba"))
-cl(isPalindrome("abba"))
+cl("hello " + isPalindrome("hello"))
+cl("absdba " + isPalindrome("absdba"))
+cl("abba " + isPalindrome("abba"))
 
 function swap(array, num1, num2) {
     var temp = array[num1];
