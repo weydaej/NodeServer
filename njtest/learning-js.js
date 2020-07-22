@@ -299,8 +299,8 @@ cl(fibFastRecursive(20))
 // second == word[length - 1 - i]
 function isPalindrome(word) {
     var isPal = true;
-    for (let i = 0; i < word.length/2; i++) { 
-        if (word[i] != word[word.length - 1 - i]) isPal = false;
+    for (let i = 0; i < word.length / 2; i++) { // efficient because it only goes through half of the word
+        if (word[i] != word[word.length - 1 - i]) isPal = false; // return false if the opposite letter doesn't match
     }
     return isPal;
 }
